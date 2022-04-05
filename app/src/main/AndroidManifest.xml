@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geartocare.client">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GearToCare">
+        <activity
+            android:name=".Activities.RegisterUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.PackageDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ReferralActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AddVehicleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.PackageVehicleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MyPackageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.PackageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ServiceListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.BookingDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ConfirmationActivity"
+
+            android:exported="false" />
+        <activity
+            android:name=".Activities.PaymentActivity"
+            android:exported="false" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Activities.CurrentPlaceActivity"
+            android:exported="false"
+            android:label="@string/title_activity_current_place" />
+        <activity
+            android:name=".Activities.PlacePickerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SlotBookingActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activities.CompleteCheckListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.DiscountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ServiceDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.PlacesAutoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.TwoWheelerServicingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.SelectLocationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.LocationMenuActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.VerifyPhoneActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.GetPhoneActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.MainActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service android:name=".Notifications.FirebaseMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"></action>
+
+            </intent-filter>
+
+
+        </service>
+
+
+    </application>
+
+</manifest>

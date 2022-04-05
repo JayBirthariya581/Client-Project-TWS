@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "597046630154",
+    "firebase_url": "https://managemechanicproto-default-rtdb.firebaseio.com",
+    "project_id": "managemechanicproto",
+    "storage_bucket": "managemechanicproto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597046630154:android:e5fbfaf9905a9cec92ccf3",
+        "android_client_info": {
+          "package_name": "com.geartocare.client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597046630154-cubapa0hoqhrgq71tb8a0ic1hitdpt86.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geartocare.client",
+            "certificate_hash": "96b17b5926351bb84555c707e83294f1c86816d0"
+          }
+        },
+        {
+          "client_id": "597046630154-fkaeffv02co433qohle1b443dvrnen7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNTjCbK_6uRTZroUkJoxfrjWfG9DiL1oY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597046630154-fkaeffv02co433qohle1b443dvrnen7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597046630154:android:1b495bcfe3f6ea1b92ccf3",
+        "android_client_info": {
+          "package_name": "com.manage.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597046630154-2c3ccqeqse3bfiu1lu549c6ig6j3vt0f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.manage.app",
+            "certificate_hash": "96b17b5926351bb84555c707e83294f1c86816d0"
+          }
+        },
+        {
+          "client_id": "597046630154-fkaeffv02co433qohle1b443dvrnen7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNTjCbK_6uRTZroUkJoxfrjWfG9DiL1oY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597046630154-fkaeffv02co433qohle1b443dvrnen7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597046630154:android:3252abfced70869292ccf3",
+        "android_client_info": {
+          "package_name": "com.mechanic.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597046630154-3elhestrg1dhdhc1brqao2jetd9qnpj9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mechanic.app",
+            "certificate_hash": "96b17b5926351bb84555c707e83294f1c86816d0"
+          }
+        },
+        {
+          "client_id": "597046630154-fkaeffv02co433qohle1b443dvrnen7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNTjCbK_6uRTZroUkJoxfrjWfG9DiL1oY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597046630154-fkaeffv02co433qohle1b443dvrnen7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597046630154:android:8fe1dfb3715b6c5392ccf3",
+        "android_client_info": {
+          "package_name": "com.referral.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597046630154-98batt08nib8rr7m8npm9rvk0273tt7u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.referral.app",
+            "certificate_hash": "96b17b5926351bb84555c707e83294f1c86816d0"
+          }
+        },
+        {
+          "client_id": "597046630154-fkaeffv02co433qohle1b443dvrnen7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNTjCbK_6uRTZroUkJoxfrjWfG9DiL1oY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597046630154-fkaeffv02co433qohle1b443dvrnen7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

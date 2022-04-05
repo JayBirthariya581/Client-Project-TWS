@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/drawable-v24/progress_back.xml" value="0.23958333333333334" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/drawable/banner_foreground.xml" value="0.23" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/drawable/color_cursor.xml" value="0.23958333333333334" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_add_vehicle.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_booking_detail.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_confirmation.xml" value="0.21240942028985507" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_discount.xml" value="0.33" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_edit_profile.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_location_menu.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_my_package.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_package.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_package_detail.xml" value="0.33" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_package_vehicle.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_referral.xml" value="0.33" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_register_user.xml" value="0.25" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_select_location.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_service_detail.xml" value="0.5" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_service_list.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_slot_booking.xml" value="0.22" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_two_wheeler_servicing.xml" value="0.694300518134715" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/card_booking.xml" value="0.22" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/card_faq.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/card_my_package.xml" value="0.33" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/card_package.xml" value="0.33" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/card_package_vehicle.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/card_payment.xml" value="1.25" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/card_service.xml" value="0.33" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/custom_progress.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/fragment_bookings.xml" value="0.21927083333333333" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/review_slider_item.xml" value="0.33" />
+        <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/slider_item_container.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_service_detail.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable-v24/back_gray.xml" value="0.24375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable-v24/not-selected_back.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable-v24/progress_back.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable-v24/time_box_back_1.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/banner_foreground.xml" value="0.24375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/booking_selector.xml" value="0.24375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/card_payment_holder.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/cursor.xml" value="0.24375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/date_box_back_1.xml" value="0.5" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/default_pager_dot.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/dialog_back.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/dot_black.xml" value="0.15648148148148147" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/drop.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/drop_3.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/home_selector.xml" value="0.24375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/mr_ms_selector.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/not_selected_back.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/profile_selector.xml" value="0.24375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/rotating_icon.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/selected_back.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/selected_pager_dot.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/selector.xml" value="0.24375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable/tab_pager_selector.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/font/poppins_medium.xml" value="0.26197916666666665" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_booking_detail.xml" value="0.33" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_complete_check_list.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_confirm_booking.xml" value="0.25" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_confirmation.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_current_place.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_discount.xml" value="0.22" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_get_phone.xml" value="0.5" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_location_menu.xml" value="0.25" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_main.xml" value="0.2234375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_payment.xml" value="0.33" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_place_picker.xml" value="0.22" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_places_auto.xml" value="0.25" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_select_location.xml" value="0.33" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_service_detail.xml" value="0.25" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_slot_booking.xml" value="0.33" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_two_wheeler_servicing.xml" value="0.2" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/activity_verify_phone.xml" value="0.25" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/card_booking.xml" value="0.25" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/card_date_box.xml" value="0.67" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/card_payment_holder.xml" value="0.33" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/card_service_domain.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/card_time_box.xml" value="0.5" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/color_cursor.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/content_main.xml" value="0.2234375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/custom_confirm_address.xml" value="0.16802536231884058" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/custom_progress.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/fragment_bookings.xml" value="0.2234375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/place_recycler_item_layout.xml" value="0.33" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/select_brand_dialog.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/selected_pager_dot.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/service_check_list.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/slider_item_container.xml" value="0.2234375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/sv_cl_card.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/sv_cl_card_act.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/tab_pager_selector.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/layout/tw_brand_card.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2234375" />
+        <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/menu/menu.xml" value="0.21927083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

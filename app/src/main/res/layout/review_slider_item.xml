@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="15dp"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="20dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="#C4C4C4"
+                app:cardCornerRadius="22.5dp"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/N"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="J"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Jay Birthariya"
+                    android:layout_marginLeft="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="-5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/star_1"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/star_3" />
+
+                    <ImageView
+                        android:id="@+id/star_2"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/star_3" />
+
+                    <ImageView
+                        android:id="@+id/star_3"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/star_3" />
+
+                    <ImageView
+                        android:id="@+id/star_4"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/star_3" />
+
+                    <ImageView
+                        android:id="@+id/star_5"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/star_3" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Professional service by them. Best part is gear to care provides price details up front and informs the technician arrival time while booking itself.i m Happy with the service😊"
+            android:textColor="@color/black"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

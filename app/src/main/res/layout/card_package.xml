@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/validity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Validity" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="description" />
+
+
+    <TextView
+        android:id="@+id/vehicleCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vehicle Count" />
+
+    <TextView
+        android:id="@+id/serviceCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service Cost" />
+
+    <TextView
+        android:id="@+id/cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Package Cost" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy"/>
+
+
+</LinearLayout>

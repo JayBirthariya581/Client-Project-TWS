@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Activities.AddVehicleActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:elevation="10dp"
+            android:minHeight="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+
+                android:paddingTop="10dp"
+
+                >
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/left_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/sv_detail_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Add vehicle"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/back"
+                    app:layout_constraintStart_toEndOf="@id/back"
+
+                    app:layout_constraintTop_toTopOf="@id/back" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/SelectCompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/pickBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:minHeight="0dp"
+                android:text="Company"
+                android:textColor="#7a7a7a"
+                android:textSize="12sp" />
+
+            <EditText
+
+                android:id="@+id/brand_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:cursorVisible="false"
+                android:textColorHint="@color/cream"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="Honda"
+                android:textColor="#1e1e1e"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="16sp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="8dp"
+                android:background="#7a7a7a" />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/pickModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:minHeight="0dp"
+                android:text="Model"
+                android:textColor="#7a7a7a"
+                android:textSize="12sp" />
+
+            <EditText
+
+                android:id="@+id/model_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:hint="Unicorn"
+                android:textColorHint="@color/cream"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:focusable="false"
+                android:textColor="#1e1e1e"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="16sp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="8dp"
+                android:background="#7a7a7a" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/vhNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:minHeight="0dp"
+                android:text="Vehicle No"
+                android:textColor="#7a7a7a"
+                android:textSize="12sp" />
+
+            <EditText
+
+                android:id="@+id/vhNo_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textAllCaps="true"
+                android:hint="Honda"
+
+                android:textColor="#1e1e1e"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="16sp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="8dp"
+                android:background="#7a7a7a" />
+
+
+        </LinearLayout>
+
+
+
+
+
+        <!--<TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Select Company"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/pickBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="5dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="0.6dp">
+
+            <TextView
+                android:id="@+id/brand_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Brand"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+
+
+                />
+
+
+            <ImageView
+
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/drop1"
+                app:tint="@color/black" />
+        </com.google.android.material.card.MaterialCardView>-->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/addVehicle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="50dp"
+                android:padding="15dp">
+
+
+                <TextView
+                    android:id="@+id/ycl1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Add"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

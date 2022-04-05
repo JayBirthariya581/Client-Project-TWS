@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activities.TwoWheelerServicingActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        android:elevation="1dp"
+        android:minHeight="0dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp">
+
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:elevation="1dp"
+
+                android:src="@drawable/left_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/head"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Two Wheeler Servicing"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="0dp"
+
+                android:src="@drawable/banner_2" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#EAF1FF"
+                    android:elevation="25dp"
+
+                    app:cardCornerRadius="12dp"
+
+
+                    app:cardUseCompatPadding="true">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/Section_BookService"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="5dp"
+
+                        android:padding="15dp"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/tw_sv_book"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginRight="10dp"
+                            android:backgroundTint="#3E64FF"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="28dp"
+                                android:layout_marginVertical="3dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Book"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+
+
+                                />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <LinearLayout
+                            android:id="@+id/comp_sv_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <TextView
+                                android:id="@+id/CompleteService"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="Full servicing"
+
+                                android:textAlignment="center"
+                                android:textColor="#48484A"
+                                android:textSize="18sp"
+
+
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/sec_comp_sv_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-3dp"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/start"
+                                    app:tint="#F39200" />
+
+                                <TextView
+                                    android:id="@+id/comp_sv_rating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="4.8"
+                                    android:textColor="#F39200" />
+
+                                <TextView
+                                    android:id="@+id/comp_sv_rating_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:text="( 2k+ ratings )"
+                                    android:textColor="#0B0B0B" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-3dp"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="8dp"
+                                    android:layout_height="8dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="2dp"
+                                    android:src="@drawable/dot_grey"
+                                    app:tint="#626262" />
+
+
+                                <TextView
+                                    android:id="@+id/comp_sv_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="5dp"
+
+                                    android:text="90-120 min"
+                                    android:textColor="#0B0B0B"
+                                    android:textSize="18sp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/sec_comp_sv_Price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-3dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="₹"
+                                    android:textColor="#1d1d1d"
+                                    android:textSize="20sp" />
+
+
+                                <TextView
+                                    android:id="@+id/comp_sv_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="4dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="300"
+                                    android:textColor="#48484A"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="#A5A2A2" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#F4F7FD"
+                    android:elevation="8dp"
+
+                    app:cardCornerRadius="12dp"
+
+
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+
+                            android:backgroundTint="#019A49"
+                            android:elevation="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="3dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Servicing checklist"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+
+
+                                />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <LinearLayout
+                            android:id="@+id/comp_sv_cl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            app:layout_constraintStart_toStartOf="parent">
+
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="3dp"
+                                    android:src="@drawable/ic_tick_1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:text="Air filter cleaning"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="3dp"
+                                    android:src="@drawable/ic_tick_1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:text="Spark plug cleaning"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="3dp"
+                                    android:src="@drawable/ic_tick_1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:text="Brake shoe/pad rubbing"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="3dp"
+                                    android:src="@drawable/ic_tick_1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:text="Front back drum rubbing"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="3dp"
+                                    android:src="@drawable/ic_tick_1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:text="Chain and sprooket adjustment"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="3dp"
+                                    android:src="@drawable/ic_tick_1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:text="Clutch cable freeplay"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="3dp"
+                                    android:src="@drawable/ic_tick_1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:text="Engine Oil check"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="3dp"
+                                    android:src="@drawable/ic_tick_1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:text="Front and rear wheel axle greasing"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/seeServiceCheckList"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:backgroundTint="#019A49"
+                                app:cardCornerRadius="5dp">
+
+
+                                <TextView
+                                    android:id="@+id/ycl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginHorizontal="15dp"
+                                    android:layout_marginVertical="3dp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="See full checklist"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+
+                                    />
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:background="#EAF1FF"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="What customer say about us"
+                    android:textColor="#454141"
+                    android:textSize="18sp" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerImageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Frequently asked questions"
+                    android:textColor="#454141"
+                    android:textSize="18sp" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/faq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
