@@ -106,7 +106,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
 
                             try {
 
-                                Query checkUser = FirebaseDatabase.getInstance().getReference("Users").orderByChild("phone").equalTo(phone);
+                                Query checkUser = FirebaseDatabase.getInstance().getReference("Users").orderByChild("phone").equalTo(getIntent().getStringExtra("phone"));
 
 
                                 checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
