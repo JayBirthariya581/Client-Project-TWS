@@ -54,9 +54,10 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 sessionManager.logoutSession();
-
-
-                startActivity(new Intent(getContext(), GetPhoneActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+                Intent i=new Intent(getContext(), GetPhoneActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.putExtra("Referred","NO");
+                startActivity(i);
                 ((Activity) getContext()).finish();
 
 

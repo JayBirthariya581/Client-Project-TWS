@@ -111,7 +111,25 @@
             android:exported="true" />
         <activity
             android:name=".Activities.SplashActivity"
+            android:launchMode="singleTask"
             android:exported="true">
+
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="geartocare.page.link"
+                    android:scheme="https" />
+                <data
+                    android:host="geartocare.page.link"
+                    android:scheme="http" />
+            </intent-filter>
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -129,7 +147,9 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <service android:name=".Notifications.FirebaseMessagingService" android:exported="false">
+        <service
+            android:name=".Notifications.FirebaseMessagingService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"></action>
 

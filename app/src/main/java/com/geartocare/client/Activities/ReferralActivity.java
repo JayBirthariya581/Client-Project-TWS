@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.geartocare.client.Helpers.CustomProgressDialog;
 import com.geartocare.client.Helpers.ShareTo;
 import com.geartocare.client.SessionManager;
 import com.geartocare.client.databinding.ActivityReferralBinding;
@@ -33,14 +34,15 @@ public class ReferralActivity extends AppCompatActivity {
     ActivityReferralBinding binding;
     SessionManager sessionManager;
     Uri shortLink;
+    CustomProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityReferralBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         sessionManager = new SessionManager(ReferralActivity.this);
-
-
+        progressDialog = new CustomProgressDialog(ReferralActivity.this);
+        progressDialog.show();
         FirebaseDatabase.getInstance().getReference("Users").child(sessionManager.getUsersDetailsFromSessions().get(SessionManager.KEY_UID))
                 .child("Referral").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -185,7 +187,7 @@ public class ReferralActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Short link created
                             shortLink = task.getResult().getShortLink();
-
+                            progressDialog.dismiss();
 
 
 
