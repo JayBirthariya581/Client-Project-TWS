@@ -8,15 +8,19 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.geartocare.client.R;
 import com.geartocare.client.SessionManager;
 import com.geartocare.client.databinding.ActivityGetPhoneBinding;
 
+import java.sql.Ref;
+
 public class GetPhoneActivity extends AppCompatActivity {
     ActivityGetPhoneBinding binding;
-
+    String Referred;
+    SessionManager sessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +28,27 @@ public class GetPhoneActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         getWindow().setStatusBarColor(ContextCompat.getColor(GetPhoneActivity.this, R.color.white));
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        sessionManager = new SessionManager(GetPhoneActivity.this);
+
+        Referred = getIntent().getStringExtra("Referred");
+
+
+
 
         binding.logSig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+
+
                 Intent intent = new Intent(GetPhoneActivity.this,VerifyPhoneActivity.class);
+
+                if(Referred.equals("YES")){
+                    intent.putExtra("ReferLink",getIntent().getStringExtra("ReferLink"));
+
+                }
+                intent.putExtra("Referred",Referred);
                 intent.putExtra("phone",binding.phoneL.getEditText().getText().toString());
                 startActivity(intent);
 
@@ -61,21 +81,26 @@ public class GetPhoneActivity extends AppCompatActivity {
     }
 
 
+
+
     @Override
     protected void onStart() {
         super.onStart();
 
-        if(FirebaseAuth.getInstance().getCurrentUser()!=null){
-            if(new SessionManager(GetPhoneActivity.this).getUsersDetailsFromSessions().get(SessionManager.KEY_LOCATION_Txt).isEmpty()){
-                startActivity(new Intent(GetPhoneActivity.this,LocationMenuActivity.class));
+            if(sessionManager.checkLogin()){
 
-            }else{
-                startActivity(new Intent(GetPhoneActivity.this,MainActivity.class));
+                if(sessionManager.getUsersDetailsFromSessions().get(SessionManager.KEY_LOCATION_Txt).equals("none")){
+                    startActivity(new Intent(GetPhoneActivity.this,LocationMenuActivity.class));
+                    finish();
 
+                }else{
+                    startActivity(new Intent(GetPhoneActivity.this,MainActivity.class));
+                    finish();
+                }
             }
 
-                finish();
 
-        }
+
+
     }
 }

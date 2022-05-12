@@ -81,6 +81,58 @@ public class ShareTo {
 
     }
 
+public void shareToAppRefer(String packageName,String shareBody){
+
+        if(isPackageInstalled(packageName,context.getPackageManager())){
+            Intent sendIntent = new Intent(Intent.ACTION_SEND);
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.setType("text/plain");
+
+
+
+
+            sendIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+
+            sendIntent.setPackage(packageName);
+
+            context.startActivity(Intent.createChooser(sendIntent, "Share via"));
+           /* FirebaseDatabase.getInstance().getReference().child("AppStatus").addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    if(snapshot.exists()){
+
+                    }else{
+                        Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
+                    }
+
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+*/
+
+
+        }else{
+            try {
+                Intent viewIntent =
+                        new Intent("android.intent.action.VIEW",
+                                Uri.parse("https://play.google.com/store/apps/details?id="+packageName));
+                context.startActivity(viewIntent);
+            }catch(Exception e) {
+                Toast.makeText(context,"Unable to Connect Try Again...",
+                        Toast.LENGTH_LONG).show();
+                e.printStackTrace();
+            }
+        }
+
+    }
+
 
 
     private boolean isPackageInstalled(String packageName, PackageManager packageManager) {
