@@ -2,6 +2,7 @@ package com.geartocare.client.Notifications;
 
 import android.app.Activity;
 import android.content.Context;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -18,23 +19,21 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FcmNotificationsSender  {
+public class FcmNotificationsSender {
 
     String userFcmToken;
-    String title;
-    String body;
+
     Context mContext;
     Activity mActivity;
-
+    JSONObject notificationData;
 
     private RequestQueue requestQueue;
     private final String postUrl = "https://fcm.googleapis.com/fcm/send";
-    private final String fcmServerKey ="AAAAiwLAlwo:APA91bGOIFIMmpdYQKZ_8b5DkKJ0H9El4OxBGjbgnap5U_0fYHNsUiuUffVQz_PGGfvU6VCknfp-eCmk2x3M918QYE6uvuuwjeQm9zrwwLIIHlK0i_xCbkoHtXq5WEwqf5x3TeJonYbi";
+    private final String fcmServerKey = "AAAAiwLAlwo:APA91bGOIFIMmpdYQKZ_8b5DkKJ0H9El4OxBGjbgnap5U_0fYHNsUiuUffVQz_PGGfvU6VCknfp-eCmk2x3M918QYE6uvuuwjeQm9zrwwLIIHlK0i_xCbkoHtXq5WEwqf5x3TeJonYbi";
 
-    public FcmNotificationsSender(String userFcmToken, String title, String body, Context mContext, Activity mActivity) {
+    public FcmNotificationsSender(String userFcmToken, Context mContext, Activity mActivity) {
         this.userFcmToken = userFcmToken;
-        this.title = title;
-        this.body = body;
+
         this.mContext = mContext;
         this.mActivity = mActivity;
 
@@ -49,20 +48,29 @@ public class FcmNotificationsSender  {
         this.userFcmToken = userFcmToken;
     }
 
+    public JSONObject getNotificationData() {
+        return notificationData;
+    }
+
+    public void setNotificationData(String title, String body){
+        notificationData = new JSONObject();
+        try {
+            notificationData.put("title", title);
+            notificationData.put("body", body);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void SendNotifications() {
 
         requestQueue = Volley.newRequestQueue(mActivity);
         JSONObject mainObj = new JSONObject();
         try {
             mainObj.put("to", userFcmToken);
-            JSONObject notiObject = new JSONObject();
-            notiObject.put("title", title);
-            notiObject.put("body", body);
-            notiObject.put("icon", "icon"); // enter icon that exists in drawable only
 
-
-
-            mainObj.put("data", notiObject);
+            notificationData.put("icon", "icon"); // enter icon that exists in drawable only
+            mainObj.put("data", notificationData);
 
 
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, postUrl, mainObj, new Response.Listener<JSONObject>() {
@@ -99,11 +107,7 @@ public class FcmNotificationsSender  {
         }
 
 
-
-
     }
-
-
 
 
     public void SendNotificationsTo(JSONArray ids) {
@@ -112,16 +116,8 @@ public class FcmNotificationsSender  {
         JSONObject mainObj = new JSONObject();
         try {
             mainObj.put("registration_ids", ids);
-            JSONObject notiObject = new JSONObject();
-            notiObject.put("title", title);
-            notiObject.put("body", body);
-            notiObject.put("goTo", "onHold");
-
-            notiObject.put("icon", "icon"); // enter icon that exists in drawable only
-
-
-
-            mainObj.put("data", notiObject);
+            notificationData.put("icon", "icon");
+            mainObj.put("data", notificationData);
 
 
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, postUrl, mainObj, new Response.Listener<JSONObject>() {
@@ -129,6 +125,7 @@ public class FcmNotificationsSender  {
                 public void onResponse(JSONObject response) {
 
                     // code run is got response
+                    Toast.makeText(mContext, response.toString(), Toast.LENGTH_SHORT).show();
 
                 }
             }, new Response.ErrorListener() {
@@ -156,8 +153,6 @@ public class FcmNotificationsSender  {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-
 
 
     }

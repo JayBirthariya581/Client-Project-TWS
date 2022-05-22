@@ -83,9 +83,8 @@ public class LocationMenuActivity extends AppCompatActivity {
         binding = ActivityLocationMenuBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        getWindow().setStatusBarColor(ContextCompat.getColor(LocationMenuActivity.this, R.color.white));
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        sessionManager = new SessionManager(LocationMenuActivity.this);
+
+       sessionManager = new SessionManager(LocationMenuActivity.this);
 
          dialog = new CustomProgressDialog(LocationMenuActivity.this);
 

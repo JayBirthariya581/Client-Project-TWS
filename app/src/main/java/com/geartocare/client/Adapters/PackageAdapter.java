@@ -1,5 +1,6 @@
 package com.geartocare.client.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -31,11 +32,20 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageAdapter.MyViewHo
     Context context;
     ArrayList<ModelPackage> packages;
     SessionManager sessionManager;
+    String purpose;
 
     public PackageAdapter(Context context, ArrayList<ModelPackage> packages) {
         this.context = context;
         this.packages = packages;
         sessionManager = new SessionManager(context);
+    }
+
+    public String getPurpose() {
+        return purpose;
+    }
+
+    public void setPurpose(String purpose) {
+        this.purpose = purpose;
     }
 
     @NonNull
@@ -55,6 +65,30 @@ public class PackageAdapter extends RecyclerView.Adapter<PackageAdapter.MyViewHo
         holder.binding.validity.setText(m.getValidity());
         holder.binding.vehicleCount.setText(m.getVehicleCount());
         holder.binding.description.setText(m.getDescription());
+
+
+        if(purpose.equals("buy")){
+            holder.binding.buy.setVisibility(View.VISIBLE);
+        }
+
+        if(purpose.equals("include")){
+            holder.binding.include.setVisibility(View.VISIBLE);
+
+        }
+
+        holder.binding.include.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent data = new Intent();
+                data.putExtra("packageDetails",m);
+                ((Activity) context).setResult(Activity.RESULT_OK,data);
+                ((Activity) context).finish();
+
+
+
+            }
+        });
+
 
         holder.binding.buy.setOnClickListener(new View.OnClickListener() {
             @Override

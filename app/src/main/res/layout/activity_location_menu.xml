@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/poppins_light"
+            android:fontFamily="@font/roboto_light"
             android:text="Hi, nice to meet you!"
             android:textColor="@color/grey"
             android:textSize="15sp" />
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/poppins_semibold"
+            android:fontFamily="@font/roboto_medium"
             android:text="See services around"
             android:textColor="@color/black"
             android:textSize="25sp" />
@@ -79,7 +79,7 @@
                     android:id="@+id/ycl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/roboto"
                     android:text="Your Current Location"
 
                     android:textColor="@color/white"
@@ -121,7 +121,7 @@
                     android:id="@+id/sol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/roboto"
                     android:text="Some other Location"
 
                     android:textColor="@color/black"

@@ -4,75 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cream"
     tools:context=".Activities.ServiceDetailActivity">
 
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        android:elevation="2dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingVertical="15dp">
 
-            android:contentInsetStart="0dp"
-            android:contentInsetLeft="0dp"
-            android:contentInsetEnd="0dp"
-            android:contentInsetRight="0dp"
-            android:elevation="10dp"
-            android:minHeight="0dp"
-            app:contentInsetEnd="0dp"
-            app:contentInsetLeft="0dp"
-            app:contentInsetRight="0dp"
-            app:contentInsetStart="0dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-
-                android:paddingTop="10dp"
-
-                >
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/grey3"
+                app:strokeWidth="0.01dp">
 
                 <ImageView
-                    android:id="@+id/back"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:src="@drawable/left_arrow"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_margin="10dp"
+                    android:elevation="1dp"
+                    android:src="@drawable/left_arrow" />
 
-                <TextView
-                    android:id="@+id/sv_detail_head"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="Booking Detail"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@id/back"
-                    app:layout_constraintStart_toEndOf="@id/back"
-
-                    app:layout_constraintTop_toTopOf="@id/back" />
+            </com.google.android.material.card.MaterialCardView>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Booking details"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
+    </androidx.appcompat.widget.Toolbar>
 
 
     <androidx.core.widget.NestedScrollView
@@ -88,155 +83,39 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp">
-
-
-                <TextView
-                    android:id="@+id/sv_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="Service name"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_sv_cl"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/sv_name" />
-
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/seeServiceCheckList"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:backgroundTint="#f0f0f0"
-
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/rv_sv_cl">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:minHeight="30dp"
-                        android:paddingLeft="20dp"
-
-                        >
-
-                        <ImageView
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_marginRight="10dp"
-                            android:src="@drawable/booking"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/ycl"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:tint="@color/black" />
-
-                        <TextView
-                            android:id="@+id/ycl"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="See Complete CheckList"
-                            android:textColor="@color/black"
-                            android:textSize="10sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-
-                            />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="20dp"
+                android:elevation="50dp"
+                app:cardCornerRadius="5dp">
 
                 <LinearLayout
-                    android:id="@+id/sv_price_box"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="₹"
-                        android:textColor="@color/black"
-                        android:textSize="22sp" />
-
-                    <TextView
-                        android:id="@+id/sv_price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="300"
-                        android:textColor="@color/black"
-                        android:textSize="22sp" />
-
-                </LinearLayout>
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-
-                        >
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/item_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="@font/poppins_medium"
+                            android:fontFamily="@font/roboto"
                             android:text="Honda"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
-
-                            />
+                            android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -250,7 +129,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="@font/poppins_medium"
+                            android:fontFamily="@font/roboto"
                             android:text="Unicorn"
                             android:textColor="@color/black"
                             android:textSize="16sp"
@@ -268,7 +147,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="@font/poppins_medium"
+                            android:fontFamily="@font/roboto"
                             android:text="MH31PL56"
                             android:textColor="@color/black"
                             android:textSize="16sp"
@@ -277,12 +156,91 @@
 
                     </LinearLayout>
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/roboto_light"
+                            android:text="Service type"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/svPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Rs.0/-"
+                            android:textColor="#6E8AFE"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="5dp"
+                        android:background="@color/grey4" />
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Location"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/item_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginVertical="5dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:maxWidth="300dp"
+                        android:text="Address"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginVertical="5dp"
+                        android:background="@color/grey4" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Date &amp; Time"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+
+                        />
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-
-                        >
+                        android:layout_marginVertical="5dp"
+                        android:orientation="horizontal">
 
 
                         <TextView
@@ -290,8 +248,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="13/1/2022"
+
+                            android:fontFamily="@font/roboto_light"
+                            android:text=""
                             android:textColor="@color/black"
                             android:textSize="14sp"
 
@@ -308,8 +267,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="@font/poppins_light"
-                            android:text="9 AM"
+                            android:fontFamily="@font/roboto_light"
+                            android:text=""
                             android:textColor="@color/black"
                             android:textSize="14sp"
 
@@ -318,113 +277,128 @@
 
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/item_location"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:fontFamily="@font/poppins_light"
-                        android:maxWidth="300dp"
-                        android:text="9 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAM"
-                        android:textColor="@color/black"
-                        android:textSize="13sp"
-
-                        />
-
 
                 </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 
-            </LinearLayout>
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/dis_box"
+            <ImageView
+                android:id="@+id/packageLauncher"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/white"
-                android:padding="10dp">
-
-                <ImageView
-                    android:id="@+id/dis_logo"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/discount"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                android:adjustViewBounds="true"
+                android:src="@drawable/membership_banner2" />
 
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                app:cardCornerRadius="5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dis_box"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="@id/dis_logo"
-                    app:layout_constraintStart_toEndOf="@id/dis_logo"
-                    app:layout_constraintTop_toTopOf="@id/dis_logo">
+                    android:background="@color/white"
+                    android:padding="10dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:layout_marginLeft="16dp"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="Discounts / Promo Code"
-                        android:textColor="@color/black"
-                        android:textSize="12sp"
+                    <ImageView
+                        android:id="@+id/dis_logo"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/coupon_ic"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/dis_logo"
+                        app:layout_constraintStart_toEndOf="@id/dis_logo"
+                        app:layout_constraintTop_toTopOf="@id/dis_logo">
 
-                        android:layout_marginLeft="16dp"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="4 offers available"
-                        android:textSize="11sp"
-                        app:layout_constraintStart_toStartOf="parent"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Discounts / Promo Code"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="16dp"
+                            android:fontFamily="@font/roboto_light"
+                            android:text="4 offers available"
+                            android:textSize="11sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <ImageView
+
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="25dp"
+                        android:src="@drawable/arrow_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-
-                        />
-
-
-                </LinearLayout>
+                        app:tint="#727272" />
 
 
-                <ImageView
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginRight="35dp"
-                    android:src="@drawable/arrow_right"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="#727272" />
+            </androidx.cardview.widget.CardView>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/white"
-                android:orientation="vertical">
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                app:cardCornerRadius="5dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/roboto"
+                        android:text="Billing details"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+
+                        />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/paymentBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
                         android:overScrollMode="never" />
 
 
@@ -444,10 +418,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:fontFamily="@font/poppins_medium"
+                            android:fontFamily="@font/roboto_medium"
                             android:text="Total"
                             android:textColor="@color/black"
-                            android:textSize="14sp" />
+                            android:textSize="18sp" />
 
 
                         <LinearLayout
@@ -457,29 +431,38 @@
                             android:layout_alignParentRight="true"
                             android:orientation="horizontal"
                             app:layout_constraintEnd_toEndOf="parent"
-
                             app:layout_constraintTop_toTopOf="parent"
-
                             >
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_medium"
-                                android:text="₹"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-
-                                />
+                                android:layout_alignParentEnd="true"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="Rs."
+                                android:textColor="#6E8AFE"
+                                android:textSize="18sp" />
 
                             <TextView
                                 android:id="@+id/total_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_medium"
-                                android:text=""
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
+                                android:layout_alignParentEnd="true"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="359"
+                                android:textColor="#6E8AFE"
+                                android:textSize="18sp"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="/-"
+                                android:textColor="#6E8AFE"
+                                android:textSize="18sp"
 
                                 />
 
@@ -488,10 +471,22 @@
 
                 </LinearLayout>
 
+            </androidx.cardview.widget.CardView>
 
-            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp"
+                app:cardCornerRadius="5dp">
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/door_step_banner" />
 
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
 
@@ -510,18 +505,19 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.3dp"
-
-            android:background="@color/grey"
+            android:background="@color/grey4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/continue_booking"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -530,55 +526,23 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:minHeight="50dp"
-                android:padding="15dp">
+                android:paddingVertical="14dp">
 
 
-                <LinearLayout
-                    android:id="@+id/sv_btn_price_box"
+                <TextView
+                    android:id="@+id/ycl1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:orientation="horizontal"
+                    android:fontFamily="@font/roboto"
+                    android:text="Proceed"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
 
-                    <TextView
-                        android:id="@+id/ycl1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="Pay  "
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="₹"
-                        android:textColor="@color/white"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/sv_btn_price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="340"
-                        android:textColor="@color/white"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
+                    />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

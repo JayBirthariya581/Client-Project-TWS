@@ -20,8 +20,8 @@ public class CustomProgressDialog extends Dialog {
         getWindow().setAttributes(wlmp);
         setTitle(null);
         setCancelable(false);
-
         setOnCancelListener(null);
+
         View view = LayoutInflater.from(context).inflate(
                 R.layout.custom_progress, null);
         setContentView(view);

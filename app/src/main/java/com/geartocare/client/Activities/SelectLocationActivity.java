@@ -55,7 +55,6 @@ public class SelectLocationActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         binding = ActivitySelectLocationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getWindow().setStatusBarColor(ContextCompat.getColor(SelectLocationActivity.this, R.color.black));
 
 
         locationRequest = LocationRequest.create();

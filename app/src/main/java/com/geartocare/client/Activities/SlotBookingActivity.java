@@ -8,15 +8,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 
+import com.geartocare.client.SessionManager;
+import com.geartocare.client.databinding.NoVehicleBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -49,6 +53,7 @@ public class SlotBookingActivity extends AppCompatActivity {
     DateBoxAdapter dateBoxAdapter;
     TimeBoxAdapter timeBoxAdapter;
     RecyclerView cL;
+    SessionManager sessionManager;
     HashMap<String, String> serviceDetails;
     int Place_Picker_Request = 1;
     CustomProgressDialog dialog;
@@ -59,15 +64,14 @@ public class SlotBookingActivity extends AppCompatActivity {
         binding = ActivitySlotBookingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        getWindow().setStatusBarColor(ContextCompat.getColor(SlotBookingActivity.this, R.color.black));
         dialog = new CustomProgressDialog(SlotBookingActivity.this);
-
+        sessionManager = new SessionManager(SlotBookingActivity.this);
         dialog.setCancelable(false);
         dialog.show();
 
         serviceDetails = (HashMap<String, String>) getIntent().getSerializableExtra("serviceDetails");
 
-        binding.svDetailHead.setText(serviceDetails.get("serviceName"));
+        //binding.svDetailHead.setText(serviceDetails.get("serviceName"));
 
         DBref = FirebaseDatabase.getInstance().getReference("Services").child("TwoWheelerService").child("CompanyList");
 
@@ -81,6 +85,64 @@ public class SlotBookingActivity extends AppCompatActivity {
 
 
         manageVehicleBox();
+
+        /*binding.vhNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                FirebaseDatabase.getInstance().getReference("Users").child(sessionManager.getUsersDetailsFromSessions().get(SessionManager.KEY_UID))
+                        .child("vehicles").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot vehicleSnap) {
+
+                        if(!vehicleSnap.exists()){
+
+
+
+
+
+                        }else{
+
+
+                            NoVehicleBinding noVehicleBinding = NoVehicleBinding.inflate(getLayoutInflater());
+                            Dialog nvDialog = new Dialog(SlotBookingActivity.this);
+                            nvDialog.setContentView(noVehicleBinding.getRoot());
+
+                            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                            lp.copyFrom(nvDialog.getWindow().getAttributes());
+                            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+                            lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                            nvDialog.getWindow().setAttributes(lp);
+
+
+                            nvDialog.show();
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        }
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+            }
+        });*/
 
 
         binding.continueBooking.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +164,7 @@ public class SlotBookingActivity extends AppCompatActivity {
         if (dateBoxAdapter.getSelectedPosition() != (-1) && timeBoxAdapter.getSelectedPosition() != (-1) && !binding.brandTv.getText().toString().isEmpty()
                 && !binding.modelTv.getText().toString().isEmpty() && !binding.vhNoTv.getText().toString().isEmpty()) {
 
-            Intent i = new Intent(SlotBookingActivity.this, PlacePickerActivity.class);
+            Intent i = new Intent(SlotBookingActivity.this, PlacePickerActivity.class).putExtra("Activity",ServiceDetailActivity.class);
 
             serviceDetails.put("Date", mList.get(dateBoxAdapter.getSelectedPosition()).getDateF());
             serviceDetails.put("Time", timeBoxAdapter.getMlist().get(timeBoxAdapter.getSelectedPosition()).getTime());
@@ -210,6 +272,13 @@ public class SlotBookingActivity extends AppCompatActivity {
 
                         }
                     });
+
+
+
+
+
+
+
 
 
                 }

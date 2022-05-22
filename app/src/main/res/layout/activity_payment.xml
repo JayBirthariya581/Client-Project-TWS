@@ -67,7 +67,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
-                        android:fontFamily="@font/poppins_medium"
+                        android:fontFamily="@font/roboto"
                         android:text="Select Payment Method"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
@@ -83,7 +83,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="30dp"
-                            android:fontFamily="@font/poppins_light"
+                            android:fontFamily="@font/roboto_light"
                             android:text="Amount to pay : ₹"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
@@ -94,7 +94,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
 
-                            android:fontFamily="@font/poppins_light"
+                            android:fontFamily="@font/roboto_light"
                             android:text="300"
                             android:textColor="@color/black"
                             android:textSize="16sp" />
@@ -143,7 +143,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/roboto"
                     android:text="UPI"
                     android:layout_marginTop="10dp"
 
@@ -193,7 +193,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="16dp"
-                        android:fontFamily="@font/poppins_light"
+                        android:fontFamily="@font/roboto_light"
                         android:text="Amazon"
                         android:textColor="@color/black"
                         android:textSize="16sp"
@@ -263,7 +263,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="16dp"
-                        android:fontFamily="@font/poppins_light"
+                        android:fontFamily="@font/roboto_light"
                         android:text="Paytm"
                         android:textColor="@color/black"
                         android:textSize="16sp"
@@ -352,7 +352,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="16dp"
-                        android:fontFamily="@font/poppins_light"
+                        android:fontFamily="@font/roboto_light"
                         android:text="Pay after service "
                         android:textColor="@color/black"
                         android:textSize="16sp"
@@ -443,7 +443,7 @@
                         android:id="@+id/ycl1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
+                        android:fontFamily="@font/roboto"
                         android:text="Pay  "
                         android:textColor="@color/white"
                         android:textSize="16sp"
@@ -457,7 +457,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
+                        android:fontFamily="@font/roboto"
                         android:text="₹"
                         android:textColor="@color/white"
                         android:textSize="16sp" />
@@ -466,7 +466,7 @@
                         android:id="@+id/sv_btn_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
+                        android:fontFamily="@font/roboto"
                         android:text="340"
                         android:textColor="@color/white"
                         android:textSize="16sp" />

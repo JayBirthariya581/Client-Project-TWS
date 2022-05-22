@@ -26,8 +26,6 @@ public class GetPhoneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityGetPhoneBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getWindow().setStatusBarColor(ContextCompat.getColor(GetPhoneActivity.this, R.color.white));
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         sessionManager = new SessionManager(GetPhoneActivity.this);
 
         Referred = getIntent().getStringExtra("Referred");

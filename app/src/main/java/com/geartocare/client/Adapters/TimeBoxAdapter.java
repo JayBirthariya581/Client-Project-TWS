@@ -65,14 +65,17 @@ public class TimeBoxAdapter extends RecyclerView.Adapter<TimeBoxAdapter.MyViewHo
         if(mlist.get(position).getStatus().equals("Available")){
 
 
-            if(selectedPosition==position){
-                holder.binding.main.setBackgroundResource(R.drawable.selected_back);
-                holder.binding.date.setTextColor(Color.parseColor("#4a60d0"));
-                holder.binding.day.setTextColor(Color.parseColor("#4a60d0"));
-            }else{
-                holder.binding.main.setBackgroundResource(R.drawable.time_box_back_1);
-                holder.binding.date.setTextColor(Color.parseColor("#000000"));
-                holder.binding.day.setTextColor(Color.parseColor("#7c7c7c"));
+            if (selectedPosition == position) {
+
+                holder.binding.getRoot().setCardBackgroundColor(Color.parseColor("#3E64FF"));
+                holder.binding.getRoot().setStrokeColor(Color.parseColor("#3E64FF"));
+                holder.binding.date.setTextColor(Color.parseColor("#ffffff"));
+                holder.binding.day.setTextColor(Color.parseColor("#ffffff"));
+            } else {
+                holder.binding.getRoot().setCardBackgroundColor(Color.parseColor("#ffffff"));
+                holder.binding.getRoot().setStrokeColor(Color.parseColor("#6B779A"));
+                holder.binding.date.setTextColor(Color.parseColor("#6B779A"));
+                holder.binding.day.setTextColor(Color.parseColor("#6B779A"));
             }
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -87,10 +90,14 @@ public class TimeBoxAdapter extends RecyclerView.Adapter<TimeBoxAdapter.MyViewHo
             });
         }else{
 
-            holder.binding.main.setBackgroundResource(R.drawable.not_available_back);
-            holder.binding.date.setTextColor(context.getResources().getColor(R.color.grey));
-            holder.binding.day.setTextColor(context.getResources().getColor(R.color.grey));
+            holder.binding.getRoot().setCardBackgroundColor(context.getResources().getColor(R.color.cream));
+            holder.binding.getRoot().setStrokeColor(context.getResources().getColor(R.color.cream));
+            holder.binding.date.setTextColor(Color.parseColor("#6B779A"));
+            holder.binding.day.setTextColor(Color.parseColor("#6B779A"));
             holder.itemView.setFocusable(false);
+            holder.itemView.setClickable(false);
+            holder.itemView.setOnClickListener(null);
+            holder.binding.getRoot().setOnClickListener(null);
         }
 
 

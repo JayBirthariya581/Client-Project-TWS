@@ -3,80 +3,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.PlacePickerActivity"
-    >
+    tools:context=".Activities.PlacePickerActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        android:elevation="2dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingVertical="15dp">
 
-            android:minHeight="0dp"
-            android:contentInsetLeft="0dp"
-            android:contentInsetStart="0dp"
-            app:contentInsetLeft="0dp"
-            app:contentInsetStart="0dp"
-            android:contentInsetRight="0dp"
-            android:contentInsetEnd="0dp"
-            app:contentInsetRight="0dp"
-            app:contentInsetEnd="0dp"
-            android:elevation="10dp"
-            >
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/grey3"
+                app:strokeWidth="0.01dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="10dp"
-
-                android:background="@color/white"
-
-                >
                 <ImageView
-                    android:id="@+id/img_back"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:src="@drawable/left_arrow"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="10dp"
-                    />
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_margin="10dp"
+                    android:elevation="1dp"
+                    android:src="@drawable/left_arrow" />
 
-                <TextView
-                    android:id="@+id/sv_detail_head"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toEndOf="@id/img_back"
-                    app:layout_constraintTop_toTopOf="@id/img_back"
-                    app:layout_constraintBottom_toBottomOf="@id/img_back"
-                    android:text="Pick Location"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:textColor="@color/black"
-
-                    android:layout_marginLeft="30dp"/>
+            </com.google.android.material.card.MaterialCardView>
 
 
+            <TextView
+                android:id="@+id/head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Pick your location"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-
-
+    </androidx.appcompat.widget.Toolbar>
 
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
@@ -85,172 +74,161 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toTopOf="@id/ll_ab"
-        tools:context="boommba.apps.prototype.draggablemapviewandroid.MapsActivity" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:context=".Activities.PlacePickerActivity" />
 
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="@id/map"
+        app:layout_constraintEnd_toEndOf="@id/map"
+        app:layout_constraintStart_toStartOf="@id/map"
+        app:layout_constraintTop_toTopOf="@id/map">
+
+        <com.skyfishjy.library.RippleBackground xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            app:rb_color="#60003333"
+            app:rb_duration="3000"
+            app:rb_radius="20dp"
+            app:rb_rippleAmount="1"
+            app:rb_scale="2">
+
+            <ImageView
+                android:id="@+id/img_pin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/marker"
+                app:tint="@color/black" />
+        </com.skyfishjy.library.RippleBackground>
+
+    </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/ll_ab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
 
+        >
 
+        <ProgressBar
+            android:id="@+id/slider"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginBottom="5dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/black"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/black" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            app:layout_constraintStart_toStartOf="@id/map"
-            app:layout_constraintEnd_toEndOf="@id/map"
-            app:layout_constraintBottom_toBottomOf="@id/map"
-            app:layout_constraintTop_toTopOf="@id/map"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Your location"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/otherLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="Other location"
+                android:textColor="@color/grey"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_light"
+            android:maxLines="3"
+            android:padding="5dp"
+            android:text="Loading..."
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/proceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#3E64FF"
+            app:cardCornerRadius="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
 
             >
 
-            <com.skyfishjy.library.RippleBackground xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/content"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-
-                app:rb_color="#60003333"
-                app:rb_duration="3000"
-                app:rb_radius="20dp"
-                app:rb_rippleAmount="1"
-                app:rb_scale="2">
-
-                <ImageView
-                    android:id="@+id/img_pin"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/marker"
-                    app:tint="@color/black" />
-            </com.skyfishjy.library.RippleBackground>
-
-        </LinearLayout>
-
-
-
-
-
-     <LinearLayout
-            android:id="@+id/ll_ab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:background="@color/white"
-
-         >
-            <ProgressBar
-                android:id="@+id/pro_bar"
-                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:layout_marginBottom="5dp"
-                android:indeterminate="true"
-                android:indeterminateTint="@color/black"
-                android:outlineAmbientShadowColor="@color/black"
-                android:outlineSpotShadowColor="@color/black" />
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:padding="5dp"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:paddingVertical="14dp">
+
 
                 <TextView
+                    android:id="@+id/ycl1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Your location"
-                    android:fontFamily="@font/poppins_medium"
-                    android:textColor="@color/black" />
+                    android:fontFamily="@font/roboto"
+                    android:text="Save and Proceed"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
 
-                <TextView
-                    android:id="@+id/id_tv_change"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins_medium"
-                    android:gravity="center"
-                    android:text="Change"
-                    android:textColor="@color/grey"
-                    android:textSize="16dp" />
-            </RelativeLayout>
-            <TextView
-                android:id="@+id/dragg_result"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="10dp"
-                android:padding="5dp"
-                android:maxLines="3"
-                android:ellipsize="end"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/poppins_light"
-                android:text="Loading..."
-                android:textColor="@color/black"
-                android:textSize="16dp" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
 
 
-         <com.google.android.material.card.MaterialCardView
-             android:id="@+id/ic_save_proceed"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             app:layout_constraintStart_toStartOf="parent"
-             app:layout_constraintEnd_toEndOf="parent"
-             app:layout_constraintTop_toTopOf="parent"
-             app:layout_constraintBottom_toBottomOf="parent"
-             android:layout_margin="10dp"
-             android:backgroundTint="@color/black"
-             >
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-             <androidx.constraintlayout.widget.ConstraintLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:minHeight="50dp"
-                 android:padding="15dp"
-                 >
-
-
-                 <TextView
-                     android:id="@+id/ycl1"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:fontFamily="@font/poppins_medium"
-                     android:textColor="@color/white"
-                     android:textSize="16sp"
-                     android:text="Save and Proceed"
-
-                     app:layout_constraintTop_toTopOf="parent"
-                     app:layout_constraintBottom_toBottomOf="parent"
-                     app:layout_constraintEnd_toEndOf="parent"
-                     app:layout_constraintStart_toStartOf="parent"
-
-                     />
-
-
-
-             </androidx.constraintlayout.widget.ConstraintLayout>
-
-         </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
-
-        
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

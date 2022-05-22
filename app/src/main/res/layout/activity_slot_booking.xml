@@ -6,71 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".Activities.SlotBookingActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        android:elevation="2dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingVertical="15dp">
 
-            android:contentInsetStart="0dp"
-            android:contentInsetLeft="0dp"
-            android:contentInsetEnd="0dp"
-            android:contentInsetRight="0dp"
-            android:elevation="10dp"
-            android:minHeight="0dp"
-            app:contentInsetEnd="0dp"
-            app:contentInsetLeft="0dp"
-            app:contentInsetRight="0dp"
-            app:contentInsetStart="0dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-
-                android:paddingTop="10dp"
-
-                >
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/grey3"
+                app:strokeWidth="0.01dp">
 
                 <ImageView
-                    android:id="@+id/back"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:src="@drawable/left_arrow"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_margin="10dp"
+                    android:elevation="1dp"
+                    android:src="@drawable/left_arrow" />
 
-                <TextView
-                    android:id="@+id/sv_detail_head"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="Date and Time"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@id/back"
-                    app:layout_constraintStart_toEndOf="@id/back"
-
-                    app:layout_constraintTop_toTopOf="@id/back" />
+            </com.google.android.material.card.MaterialCardView>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="New Appointment"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.appcompat.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
-    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
@@ -101,9 +99,9 @@
                 android:id="@+id/when"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
+                android:fontFamily="@font/roboto_medium"
                 android:text="When would you like your\nservice?"
-                android:textColor="@color/black"
+                android:textColor="#222B45"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/toolbar" />
@@ -138,9 +136,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:fontFamily="@font/poppins_semibold"
+                android:fontFamily="@font/roboto_medium"
                 android:text="Enter vehicle details"
-                android:textColor="@color/black"
+                android:textColor="#222B45"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/toolbar" />
@@ -153,20 +151,60 @@
                 android:orientation="vertical">
 
 
-                <LinearLayout
-                    android:id="@+id/pickBrand"
+                <!--<LinearLayout
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
+
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
+                        android:fontFamily="@font/roboto_light"
                         android:minHeight="0dp"
+                        android:paddingVertical="8dp"
+                        android:text="Full name"
+                        android:textColor="#6B779A"
+                        android:textSize="12sp" />
+
+                    <EditText
+
+                        android:id="@+id/name_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textinputborder"
+
+
+                        android:fontFamily="@font/roboto"
+                        android:hint="Enter name"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingVertical="15dp"
+                        android:paddingLeft="15dp"
+                        android:textColor="#1e1e1e"
+                        android:textColorHint="#6B779A"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/pickBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:minHeight="0dp"
+                        android:paddingVertical="8dp"
                         android:text="Company"
-                        android:textColor="#7a7a7a"
+                        android:textColor="#6B779A"
                         android:textSize="12sp" />
 
                     <EditText
@@ -174,74 +212,67 @@
                         android:id="@+id/brand_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#00000000"
-                        android:fontFamily="@font/poppins_medium"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"
+                        android:background="@drawable/textinputborder"
                         android:cursorVisible="false"
-                        android:textColorHint="@color/cream"
+                        android:drawableEnd="@drawable/drop_1"
+                        android:drawablePadding="20dp"
                         android:editable="false"
                         android:focusable="false"
-                        android:hint="Honda"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Select company"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingVertical="20dp"
+                        android:paddingLeft="15dp"
+                        android:paddingEnd="20dp"
                         android:textColor="#1e1e1e"
+                        android:textColorHint="#6B779A"
                         android:textCursorDrawable="@drawable/color_cursor"
-                        android:textSize="16sp" />
-
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:layout_marginTop="8dp"
-                        android:background="#7a7a7a" />
+                        android:textSize="14sp" />
 
 
                 </LinearLayout>
-
-
-
-
 
 
                 <LinearLayout
                     android:id="@+id/pickModel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
+                        android:fontFamily="@font/roboto_light"
                         android:minHeight="0dp"
+                        android:paddingVertical="8dp"
                         android:text="Model"
-                        android:textColor="#7a7a7a"
+                        android:textColor="#6B779A"
                         android:textSize="12sp" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
 
                         android:id="@+id/model_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#00000000"
-                        android:fontFamily="@font/poppins_medium"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        android:hint="Unicorn"
-                        android:textColorHint="@color/cream"
+                        android:background="@drawable/textinputborder"
                         android:cursorVisible="false"
+                        android:drawableEnd="@drawable/drop_1"
+                        android:drawablePadding="20dp"
                         android:editable="false"
                         android:focusable="false"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Select model "
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingVertical="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingEnd="20dp"
                         android:textColor="#1e1e1e"
+                        android:textColorHint="#6B779A"
                         android:textCursorDrawable="@drawable/color_cursor"
-                        android:textSize="16sp" />
-
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:layout_marginTop="8dp"
-                        android:background="#7a7a7a" />
+                        android:textSize="14sp" />
 
 
                 </LinearLayout>
@@ -251,159 +282,80 @@
                     android:id="@+id/vhNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
+                        android:fontFamily="@font/roboto_light"
                         android:minHeight="0dp"
-                        android:text="Vehicle No"
-                        android:textColor="#7a7a7a"
+                        android:paddingVertical="8dp"
+                        android:text="Vehicle Number"
+                        android:textColor="#6B779A"
                         android:textSize="12sp" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
 
                         android:id="@+id/vhNo_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="#00000000"
-                        android:fontFamily="@font/poppins_medium"
+                        android:background="@drawable/textinputborder"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Enter vehicle no."
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
+                        android:paddingVertical="15dp"
+                        android:paddingLeft="15dp"
                         android:textAllCaps="true"
-                        android:hint="Honda"
-
                         android:textColor="#1e1e1e"
+                        android:textColorHint="#6B779A"
                         android:textCursorDrawable="@drawable/color_cursor"
-                        android:textSize="16sp" />
-
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:layout_marginTop="8dp"
-                        android:background="#7a7a7a" />
+                        android:textSize="14sp" />
 
 
                 </LinearLayout>
 
 
-
-
-
-                <!--<TextView
-                    android:id="@+id/tv3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Select Company"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/toolbar" />
-
-
-
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/pickBrand"
+                <LinearLayout
+                    android:id="@+id/note"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    app:cardCornerRadius="5dp"
-                    app:strokeColor="@color/black"
-                    app:strokeWidth="0.6dp">
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/brand_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="6dp"
-                        android:layout_marginTop="7dp"
-                        android:layout_marginBottom="7dp"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="Brand"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_light"
+                        android:minHeight="0dp"
+                        android:paddingVertical="8dp"
+                        android:text="Enter Note"
+                        android:textColor="#6B779A"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/note_tv"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textinputborder"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Write your problem"
+                        android:inputType="textCapWords"
+                        android:paddingVertical="25dp"
+                        android:paddingLeft="15dp"
+                        android:textAllCaps="true"
+                        android:textColor="#1e1e1e"
+                        android:textColorHint="#6B779A"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="14sp" />
 
 
-                        />
-
-
-                    <ImageView
-
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_gravity="right|center"
-                        android:layout_marginRight="20dp"
-                        android:src="@drawable/drop1"
-                        app:tint="@color/black" />
-                </com.google.android.material.card.MaterialCardView>-->
+                </LinearLayout>
 
 
             </LinearLayout>
-
-
-            <!-- <LinearLayout
-                 android:id="@+id/SelectModel"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:layout_marginTop="20dp"
-                 android:orientation="vertical">
-
-
-                 <TextView
-
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:fontFamily="@font/poppins_semibold"
-                     android:text="Select Model"
-                     android:textColor="@color/black"
-                     android:textSize="18sp"
-                     app:layout_constraintStart_toStartOf="parent"
-                     app:layout_constraintTop_toBottomOf="@id/toolbar" />
-
-                 <com.google.android.material.card.MaterialCardView
-                     android:id="@+id/pickModel"
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="5dp"
-                     app:cardCornerRadius="5dp"
-                     app:strokeColor="@color/black"
-                     app:strokeWidth="0.6dp">
-
-                     <TextView
-                         android:id="@+id/model_tv"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:layout_gravity="center_vertical"
-                         android:layout_marginLeft="6dp"
-                         android:layout_marginTop="7dp"
-                         android:layout_marginBottom="7dp"
-                         android:fontFamily="@font/poppins_medium"
-                         android:text="Brand"
-                         android:textColor="@color/black"
-                         android:textSize="16sp"
-
-
-                         />
-
-
-                     <ImageView
-                         android:id="@+id/drop"
-                         android:layout_width="13dp"
-                         android:layout_height="13dp"
-                         android:layout_gravity="right|center"
-                         android:layout_marginRight="20dp"
-                         android:src="@drawable/drop1"
-                         app:tint="@color/black" />
-                 </com.google.android.material.card.MaterialCardView>
-
-
-             </LinearLayout>-->
 
 
         </LinearLayout>
@@ -421,18 +373,19 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.3dp"
-
-            android:background="@color/grey"
+            android:background="@color/grey4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/continue_booking"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -441,15 +394,14 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:minHeight="50dp"
-                android:padding="15dp">
+                android:paddingVertical="14dp">
 
 
                 <TextView
                     android:id="@+id/ycl1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/roboto"
                     android:text="Continue"
                     android:textColor="@color/white"
                     android:textSize="16sp"

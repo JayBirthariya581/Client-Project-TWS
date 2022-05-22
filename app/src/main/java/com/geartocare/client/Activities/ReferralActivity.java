@@ -2,6 +2,7 @@ package com.geartocare.client.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -13,10 +14,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.geartocare.client.Adapters.FaqAdapter;
 import com.geartocare.client.Helpers.CustomProgressDialog;
 import com.geartocare.client.Helpers.ShareTo;
 import com.geartocare.client.SessionManager;
 import com.geartocare.client.databinding.ActivityReferralBinding;
+import com.geartocare.client.model.ModelFaq;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -27,14 +30,18 @@ import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
 import com.google.firebase.dynamiclinks.ShortDynamicLink;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
 public class ReferralActivity extends AppCompatActivity {
     ActivityReferralBinding binding;
     SessionManager sessionManager;
+    FaqAdapter faqAdapter;
+    ArrayList<ModelFaq> faqList;
     Uri shortLink;
     CustomProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +50,8 @@ public class ReferralActivity extends AppCompatActivity {
         sessionManager = new SessionManager(ReferralActivity.this);
         progressDialog = new CustomProgressDialog(ReferralActivity.this);
         progressDialog.show();
+
+
         FirebaseDatabase.getInstance().getReference("Users").child(sessionManager.getUsersDetailsFromSessions().get(SessionManager.KEY_UID))
                 .child("Referral").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -55,8 +64,8 @@ public class ReferralActivity extends AppCompatActivity {
                     binding.code.setText(Referral.child("code").getValue(String.class));
 
 
-                    createReferLink(sessionManager.getUsersDetailsFromSessions().get(SessionManager.KEY_UID),Referral.child("code").getValue(String.class));
-
+                    createReferLink(sessionManager.getUsersDetailsFromSessions().get(SessionManager.KEY_UID), Referral.child("code").getValue(String.class));
+                    initializefaq();
                 }
 
 
@@ -69,7 +78,13 @@ public class ReferralActivity extends AppCompatActivity {
         });
 
 
-        binding.cdkey.setOnClickListener(new View.OnClickListener() {
+
+
+
+
+
+
+        /*binding.cdkey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String shareBody = sessionManager.getUsersDetailsFromSessions().get(SessionManager.KEY_UID);
@@ -78,7 +93,7 @@ public class ReferralActivity extends AppCompatActivity {
                 clipboard.setPrimaryClip(clip);
                 Toast.makeText(ReferralActivity.this, "Coupon copied to clipboard", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
 
         binding.shareWhatsapp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,19 +101,19 @@ public class ReferralActivity extends AppCompatActivity {
 
                 ShareTo shareTo = new ShareTo(ReferralActivity.this);
 
-                shareTo.shareToAppRefer("com.whatsapp",shortLink.toString());
+                shareTo.shareToAppRefer("com.whatsapp", shortLink.toString());
 
             }
         });
 
 
-        binding.shareInsta.setOnClickListener(new View.OnClickListener() {
+        /*binding.shareInsta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 ShareTo shareTo = new ShareTo(ReferralActivity.this);
 
-                shareTo.shareToAppRefer("com.instagram.android",shortLink.toString());
+                shareTo.shareToAppRefer("com.instagram.android", shortLink.toString());
 
             }
         });
@@ -110,16 +125,13 @@ public class ReferralActivity extends AppCompatActivity {
 
                 ShareTo shareTo = new ShareTo(ReferralActivity.this);
 
-                shareTo.shareToAppRefer("com.facebook.katana",shortLink.toString());
+                shareTo.shareToAppRefer("com.facebook.katana", shortLink.toString());
 
             }
-        });
+        });*/
 
 
-
-
-
-        binding.shareMore.setOnClickListener(new View.OnClickListener() {
+        binding.shareGeneral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
@@ -164,10 +176,40 @@ public class ReferralActivity extends AppCompatActivity {
 
     }
 
+    private void initializefaq() {
+
+        faqList = new ArrayList<>();
+        faqAdapter = new FaqAdapter(ReferralActivity.this, faqList);
 
 
+        binding.faq.setLayoutManager(new LinearLayoutManager(ReferralActivity.this));
+        binding.faq.setAdapter(faqAdapter);
+        binding.faq.setHasFixedSize(true);
 
-    public void createReferLink(String uid, String referCode){
+
+        ModelFaq q1 = new ModelFaq();
+        q1.setQuestion("Which engine oil do you use ?");
+        q1.setAnswer("My name is jay");
+
+        ModelFaq q2 = new ModelFaq();
+        q2.setQuestion("Are there any additional charges other than mentioned price");
+        q2.setAnswer("My name is jay");
+
+        ModelFaq q3 = new ModelFaq();
+        q3.setQuestion("Which engine oil do you use ?");
+        q3.setAnswer("My name is jay");
+
+
+        faqList.add(q1);
+        faqList.add(q2);
+        faqList.add(q3);
+        faqAdapter.notifyDataSetChanged();
+
+
+    }
+
+
+    public void createReferLink(String uid, String referCode) {
 
         String shareLink = "https://geartocare.page.link/?" +
                 "link=https://www.example.com/?custid=" + uid + "-" + referCode +
@@ -218,13 +260,6 @@ public class ReferralActivity extends AppCompatActivity {
 
 
     }
-
-
-
-
-
-
-
 
 
 }

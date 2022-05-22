@@ -1,6 +1,8 @@
 package com.geartocare.client.model;
 
-public class ModelPackage {
+import java.io.Serializable;
+
+public class ModelPackage implements Serializable {
     String name,cost,serviceCost,description,vehicleCount,validity,id;
     //ModelValidity validity;
 

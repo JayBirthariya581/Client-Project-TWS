@@ -21,7 +21,6 @@ public class ConfirmationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityConfirmationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getWindow().setStatusBarColor(ContextCompat.getColor(ConfirmationActivity.this, R.color.black));
 
         serviceDetails = (HashMap<String, String>) getIntent().getSerializableExtra("serviceDetails");
 

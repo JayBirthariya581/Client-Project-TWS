@@ -2,7 +2,6 @@ package com.geartocare.client.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
@@ -14,6 +13,7 @@ import android.view.View;
 
 import com.geartocare.client.Adapters.FaqAdapter;
 import com.geartocare.client.Adapters.ReviewSliderAdapter;
+import com.geartocare.client.databinding.ActivityTwoWheelerServicingBinding;
 import com.geartocare.client.model.ModelFaq;
 import com.geartocare.client.model.ModelReview;
 import com.google.firebase.database.DataSnapshot;
@@ -21,8 +21,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.geartocare.client.Helpers.CustomProgressDialog;
-import com.geartocare.client.R;
-import com.geartocare.client.databinding.ActivityTwoWheelerServicingBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,7 +33,6 @@ public class TwoWheelerServicingActivity extends AppCompatActivity {
     ReviewSliderAdapter reviewSliderAdapter;
     FaqAdapter faqAdapter;
     ArrayList<ModelFaq> faqList;
-
     CustomProgressDialog dialog;
     private Handler sliderHandler = new Handler();
 
@@ -44,8 +41,6 @@ public class TwoWheelerServicingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityTwoWheelerServicingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getWindow().setStatusBarColor(ContextCompat.getColor(TwoWheelerServicingActivity.this, R.color.white));
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         dialog = new CustomProgressDialog(TwoWheelerServicingActivity.this);
 
         dialog.show();
@@ -83,7 +78,7 @@ public class TwoWheelerServicingActivity extends AppCompatActivity {
         binding.seeServiceCheckList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(TwoWheelerServicingActivity.this, CompleteCheckListActivity.class)
+                startActivity(new Intent(TwoWheelerServicingActivity.this, CheckListActivity.class)
                         .putExtra("serviceID", "TwoWheelerService")
                 );
             }

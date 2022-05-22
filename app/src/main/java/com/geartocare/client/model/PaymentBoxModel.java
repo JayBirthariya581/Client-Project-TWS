@@ -1,15 +1,17 @@
 package com.geartocare.client.model;
 
-public class PaymentBoxModel {
-    String Field,value;
+import java.io.Serializable;
+
+public class PaymentBoxModel implements Serializable {
+    String field,value,type;
 
 
     public String getField() {
-        return Field;
+        return field;
     }
 
     public void setField(String field) {
-        Field = field;
+        this.field = field;
     }
 
     public String getValue() {
@@ -18,5 +20,13 @@ public class PaymentBoxModel {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

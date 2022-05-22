@@ -28,7 +28,9 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.geartocare.client.Activities.MyPackageActivity;
+import com.geartocare.client.Activities.OtherServiceActivity;
 import com.geartocare.client.Activities.PackageActivity;
+import com.geartocare.client.Activities.QueryDetailActivity;
 import com.geartocare.client.Activities.ReferralActivity;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -69,7 +71,6 @@ public class HomeFragment extends Fragment {
     SliderAdapter sliderAdapter;
     CustomProgressDialog dialog;
     SessionManager sessionManager;
-    ServiceCatlogAdapter serviceCatlogAdapter;
     ArrayList<ServiceDomainModel> serviceDomainModels;
     private Handler sliderHandler = new Handler();
 
@@ -224,6 +225,34 @@ public class HomeFragment extends Fragment {
         });
 
 
+        binding.repair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getContext(), OtherServiceActivity.class));
+
+
+            }
+        });
+
+
+        binding.tyre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getContext(), QueryDetailActivity.class).putExtra("category", "Tyre"));
+            }
+        });
+
+
+        binding.battery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), QueryDetailActivity.class).putExtra("category", "Battery"));
+            }
+        });
+
+
         binding.toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -264,7 +293,7 @@ public class HomeFragment extends Fragment {
         binding.packages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), PackageActivity.class));
+                startActivity(new Intent(getContext(), PackageActivity.class).putExtra("purpose","buy"));
             }
         });
 

@@ -29,7 +29,6 @@ public class BookingDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityBookingDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getWindow().setStatusBarColor(ContextCompat.getColor(BookingDetailActivity.this, R.color.black));
         userDetails = new SessionManager(BookingDetailActivity.this).getUsersDetailsFromSessions();
         serviceID = getIntent().getStringExtra("serviceID");
 

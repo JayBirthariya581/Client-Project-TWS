@@ -130,13 +130,16 @@ public class DateBoxAdapter extends RecyclerView.Adapter<DateBoxAdapter.MyViewHo
 
 
         if (selectedPosition == position) {
-            holder.itemView.setSelected(true);
-            holder.binding.date.setTextColor(Color.parseColor("#4a60d0"));
-            holder.binding.day.setTextColor(Color.parseColor("#4a60d0"));
+
+            holder.binding.getRoot().setCardBackgroundColor(Color.parseColor("#3E64FF"));
+            holder.binding.getRoot().setStrokeColor(Color.parseColor("#3E64FF"));
+            holder.binding.date.setTextColor(Color.parseColor("#ffffff"));
+            holder.binding.day.setTextColor(Color.parseColor("#ffffff"));
         } else {
-            holder.itemView.setSelected(false);
-            holder.binding.date.setTextColor(Color.parseColor("#000000"));
-            holder.binding.day.setTextColor(Color.parseColor("#7c7c7c"));
+            holder.binding.getRoot().setCardBackgroundColor(Color.parseColor("#ffffff"));
+            holder.binding.getRoot().setStrokeColor(Color.parseColor("#6B779A"));
+            holder.binding.date.setTextColor(Color.parseColor("#6B779A"));
+            holder.binding.day.setTextColor(Color.parseColor("#6B779A"));
         }
 
 
@@ -153,11 +156,9 @@ public class DateBoxAdapter extends RecyclerView.Adapter<DateBoxAdapter.MyViewHo
 
                     SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy");
 
-                    long dts= Long.valueOf(m.getDateF());
+                    long dts = Long.valueOf(m.getDateF());
                     DatabaseReference slots = FirebaseDatabase.getInstance().getReference("AppManager").child("SlotManager")
                             .child("Slots").child(sdf.format(dts));
-
-
 
 
                     slots.addListenerForSingleValueEvent(new ValueEventListener() {

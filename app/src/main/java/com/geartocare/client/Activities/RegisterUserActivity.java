@@ -36,7 +36,6 @@ public class RegisterUserActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setStatusBarColor(ContextCompat.getColor(RegisterUserActivity.this, R.color.black));
         binding = ActivityRegisterUserBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -226,7 +225,7 @@ public class RegisterUserActivity extends AppCompatActivity {
                             });
 
 
-                        }else{
+                        } else {
 
                             //if refercode does not exist
 
@@ -235,10 +234,6 @@ public class RegisterUserActivity extends AppCompatActivity {
                             builder.setCancelable(true);
                             binding.referCode.setText("");
                             builder.show();
-
-
-
-
 
 
                         }

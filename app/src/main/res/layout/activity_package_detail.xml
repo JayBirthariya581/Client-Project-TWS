@@ -110,7 +110,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="16dp"
-                        android:fontFamily="@font/poppins_light"
+                        android:fontFamily="@font/roboto_light"
                         android:text="Discounts / Promo Code"
                         android:textColor="@color/black"
                         android:textSize="12sp"
@@ -122,7 +122,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="16dp"
-                        android:fontFamily="@font/poppins_light"
+                        android:fontFamily="@font/roboto_light"
                         android:text="4 offers available"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -185,7 +185,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
-                            android:fontFamily="@font/poppins_medium"
+                            android:fontFamily="@font/roboto"
                             android:text="Total"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
@@ -206,7 +206,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_medium"
+                                android:fontFamily="@font/roboto"
                                 android:text="₹"
                                 android:textColor="@color/black"
                                 android:textSize="14sp"
@@ -217,7 +217,7 @@
                                 android:id="@+id/total_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_medium"
+                                android:fontFamily="@font/roboto"
                                 android:text=""
                                 android:textColor="@color/black"
                                 android:textSize="14sp"
@@ -269,7 +269,7 @@
                     android:id="@+id/ycl1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/roboto"
                     android:text="Pay  "
                     android:textColor="@color/white"
                     android:textSize="16sp"
@@ -283,7 +283,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/roboto"
                     android:text="₹"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
@@ -292,7 +292,7 @@
                     android:id="@+id/sv_pck_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/roboto"
                     android:text="340"
                     android:textColor="@color/white"
                     android:textSize="16sp" />

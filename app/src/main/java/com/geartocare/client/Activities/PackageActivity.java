@@ -20,13 +20,18 @@ public class PackageActivity extends AppCompatActivity {
     ActivityPackageBinding binding;
     PackageAdapter packageAdapter;
     ArrayList<ModelPackage> packages;
+    String purpose;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityPackageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        purpose = getIntent().getStringExtra("purpose");
+
         packages = new ArrayList<>();
         packageAdapter = new PackageAdapter(PackageActivity.this,packages);
+        packageAdapter.setPurpose(purpose);
         binding.rvPackages.setLayoutManager(new LinearLayoutManager(PackageActivity.this));
         binding.rvPackages.setHasFixedSize(true);
         binding.rvPackages.setAdapter(packageAdapter);

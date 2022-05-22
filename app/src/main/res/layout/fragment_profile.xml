@@ -48,7 +48,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="10dp"
                     android:ellipsize="end"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/roboto"
                     android:singleLine="true"
                     android:text="My Profile"
                     android:textColor="@color/white"
@@ -115,7 +115,7 @@
                             android:id="@+id/user_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_medium"
+                            android:fontFamily="@font/roboto"
                             android:text="Jay Birthariya"
                             android:textColor="@color/black"
                             android:textSize="16dp" />
@@ -124,7 +124,7 @@
                             android:id="@+id/user_email"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
+                            android:fontFamily="@font/roboto_light"
                             android:text="jaybirthariya12@gmail.com"
                             android:textColor="#7f7f7f"
 
@@ -134,7 +134,7 @@
                             android:id="@+id/user_phone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
+                            android:fontFamily="@font/roboto_light"
                             android:text="8668967239"
                             android:textColor="#7f7f7f"
 
@@ -214,7 +214,7 @@
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_light"
+                        android:fontFamily="@font/roboto_light"
                         android:text="Help"
                         android:textColor="@color/black"
                         android:layout_marginLeft="15dp"
@@ -282,7 +282,7 @@
 
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
+                            android:fontFamily="@font/roboto_light"
                             android:text="About GearToCare"
                             android:textColor="@color/black"
                             android:layout_marginLeft="15dp"
@@ -333,7 +333,7 @@
 
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_light"
+                            android:fontFamily="@font/roboto_light"
                             android:text="Share GearToCare"
                             android:textColor="@color/black"
 
@@ -377,7 +377,7 @@
         android:layout_height="wrap_content"
         android:text="Logout"
         android:textColor="#d40000"
-        android:fontFamily="@font/poppins_medium"
+        android:fontFamily="@font/roboto"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="40dp"
 

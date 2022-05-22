@@ -64,8 +64,6 @@ public class VerifyPhoneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityVerifyPhoneBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getWindow().setStatusBarColor(ContextCompat.getColor(VerifyPhoneActivity.this, R.color.white));
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
         requestQueue = Volley.newRequestQueue(VerifyPhoneActivity.this);
         dialog = new CustomProgressDialog(VerifyPhoneActivity.this);

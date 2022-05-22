@@ -8,152 +8,90 @@
     tools:context=".Fragments.HomeFragment">
 
 
-
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:contentInsetStart="0dp"
-            android:contentInsetLeft="0dp"
-            android:contentInsetEnd="0dp"
-            android:contentInsetRight="0dp"
-            android:minHeight="0dp"
-            app:contentInsetEnd="0dp"
-            app:contentInsetLeft="0dp"
-            app:contentInsetRight="0dp"
-            app:contentInsetStart="0dp"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-
-            >
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingHorizontal="40dp"
-                android:paddingVertical="20dp">
-
-                <ImageView
-                    android:id="@+id/loc"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:src="@drawable/ic_location"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/black" />
-
-
-                <TextView
-                    android:id="@+id/location_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="10dp"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/poppins_medium"
-                    android:singleLine="true"
-                    android:text="Flat no.201,Plot no.33,Arya Nagar,Koradi road Nagpur"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/drop"
-                    app:layout_constraintStart_toEndOf="@id/loc"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <ImageView
-                    android:id="@+id/drop"
-                    android:layout_width="13dp"
-                    android:layout_height="13dp"
-                    android:src="@drawable/drop2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-
-                    />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </androidx.appcompat.widget.Toolbar>
-
-
-
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:overScrollMode="never"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--<LinearLayout
-                android:id="@+id/L1"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/black"
-                android:orientation="vertical"
-                android:padding="10dp"
+                android:contentInsetStart="0dp"
+                android:contentInsetLeft="0dp"
+                android:contentInsetEnd="0dp"
+                android:contentInsetRight="0dp"
+                android:minHeight="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_scrollFlags="scroll|enterAlways"
 
-                <com.google.android.material.card.MaterialCardView
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="40dp"
+                    android:paddingVertical="15dp">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:paddingLeft="12dp"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp">
-
-                        <ImageView
-                            android:id="@+id/sc"
-                            android:layout_width="23dp"
-                            android:layout_height="23dp"
-                            android:src="@drawable/ic_search"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:tint="@color/grey" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="12dp"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="Search for Services and packages"
-                            android:textColor="@color/grey"
-                            android:textSize="15sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/sc"
-                            app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/loc"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_location"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/black" />
 
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/location_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="10dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto"
+                        android:singleLine="true"
+                        android:text="Flat no.201,Plot no.33,Arya Nagar,Koradi road Nagpur"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/drop"
+                        app:layout_constraintStart_toEndOf="@id/loc"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
-                </com.google.android.material.card.MaterialCardView>
+                    <ImageView
+                        android:id="@+id/drop"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:src="@drawable/drop2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
 
 
-            </LinearLayout>-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
 
             <LinearLayout
                 android:id="@+id/banner_box"
@@ -165,7 +103,7 @@
 
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
 
 
                 <LinearLayout
@@ -182,23 +120,11 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
 
-                         />
+                        />
 
 
                 </LinearLayout>
 
-                <!--<LinearLayout
-                    android:id="@+id/ll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="6dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal"
-
-                    >
-
-
-                </LinearLayout>-->
 
             </LinearLayout>
 
@@ -216,8 +142,8 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10dp"
-                    android:background="#EAF1FF">
+                    android:background="#EAF1FF"
+                    android:paddingVertical="20dp">
 
 
                     <com.google.android.material.card.MaterialCardView
@@ -225,18 +151,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="10dp"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/materialCardView"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent">
+                        app:layout_constraintEnd_toStartOf="@+id/rep"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/tws"
-                            android:layout_width="95dp"
-                            android:layout_height="100dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:background="@color/white"
-                            android:paddingTop="15dp"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
                             app:layout_constraintBottom_toBottomOf="parent"
 
                             >
@@ -245,8 +172,8 @@
                                 android:id="@+id/two_wheeler_ic"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
+                                android:adjustViewBounds="true"
                                 android:src="@drawable/tws_logo"
-                                android:scaleType="centerCrop"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -256,7 +183,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:fontFamily="@font/poppins_medium"
+                                android:fontFamily="@font/roboto"
                                 android:text="Servicing"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
@@ -272,27 +199,30 @@
 
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/materialCardView"
+                        android:id="@+id/rep"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="10dp"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/materialCardView3"
                         app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/materialCardView2">
+                        app:layout_constraintStart_toEndOf="@+id/materialCardView2"
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/constraintLayout"
-                            android:layout_width="95dp"
-                            android:layout_height="100dp"
+                            android:id="@+id/repair"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:background="@color/white"
-                            android:paddingTop="15dp">
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent">
 
                             <ImageView
                                 android:id="@+id/car_wash_ic"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
+                                android:adjustViewBounds="true"
                                 android:src="@drawable/repair_logo"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -303,7 +233,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:fontFamily="@font/poppins_medium"
+                                android:fontFamily="@font/roboto"
                                 android:text="Repair"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
@@ -323,23 +253,26 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="10dp"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/materialCardView4"
                         app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/materialCardView">
+                        app:layout_constraintStart_toEndOf="@+id/rep"
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/constraintLayout3"
-                            android:layout_width="95dp"
-                            android:layout_height="100dp"
+                            android:id="@+id/tyre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:background="@color/white"
-                            android:paddingTop="15dp">
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent">
 
                             <ImageView
                                 android:id="@+id/painter_ic"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
+                                android:adjustViewBounds="true"
                                 android:src="@drawable/tyre_logo"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -350,7 +283,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:fontFamily="@font/poppins_medium"
+                                android:fontFamily="@font/roboto"
                                 android:text="Tyre"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
@@ -370,23 +303,25 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="10dp"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/materialCardView3">
+                        app:layout_constraintStart_toEndOf="@+id/materialCardView3"
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/constraintLayout4"
-                            android:layout_width="95dp"
-                            android:layout_height="100dp"
+                            android:id="@+id/battery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:background="@color/white"
-                            android:paddingTop="15dp">
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent">
 
                             <ImageView
                                 android:id="@+id/ro_ic"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
+                                android:adjustViewBounds="true"
                                 android:src="@drawable/battery_logo"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -397,7 +332,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:fontFamily="@font/poppins_medium"
+                                android:fontFamily="@font/roboto"
                                 android:text="Battery"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
@@ -414,41 +349,86 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <!--<androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_sv_catlog"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/cream"
-                    android:paddingLeft="2dp"
 
-                    />-->
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:elevation="10dp"
 
-                    android:orientation="vertical">
+                    android:paddingHorizontal="15dp"
+                    android:src="@drawable/google_review_banner" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/warranty_banner" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/spare_part_banner" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/refer_banner"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
 
-                        android:src="@drawable/google_review_banner"/>
+                        />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/refer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#f45c90"
+                        app:cardCornerRadius="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.39"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.73">
 
 
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginVertical="6dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Refer Now"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
 
 
+                    </com.google.android.material.card.MaterialCardView>
 
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:src="@drawable/warranty_banner"/>
-
-
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/packages"
@@ -476,7 +456,7 @@
                             android:id="@+id/sol"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_medium"
+                            android:fontFamily="@font/roboto"
                             android:text="Packages"
 
                             android:textColor="@color/black"
@@ -517,7 +497,7 @@
                             android:id="@+id/aaa"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_medium"
+                            android:fontFamily="@font/roboto"
                             android:text="Packages"
 
                             android:textColor="@color/black"
@@ -558,7 +538,7 @@
                             android:id="@+id/sol2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_medium"
+                            android:fontFamily="@font/roboto"
                             android:text="Referral"
 
                             android:textColor="@color/black"
