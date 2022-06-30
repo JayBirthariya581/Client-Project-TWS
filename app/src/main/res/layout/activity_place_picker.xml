@@ -95,11 +95,10 @@
             android:id="@+id/content"
             android:layout_width="100dp"
             android:layout_height="100dp"
-
             app:rb_color="#60003333"
-            app:rb_duration="3000"
+            app:rb_duration="4000"
             app:rb_radius="20dp"
-            app:rb_rippleAmount="1"
+            app:rb_rippleAmount="2"
             app:rb_scale="2">
 
             <ImageView
@@ -109,7 +108,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="12dp"
                 android:src="@drawable/marker"
-                app:tint="@color/black" />
+                app:tint="@color/blue" />
         </com.skyfishjy.library.RippleBackground>
 
     </LinearLayout>
@@ -152,23 +151,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/roboto_medium"
                 android:text="Your location"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/otherLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="Other location"
+                android:text="Search other location"
                 android:textColor="@color/grey"
-                android:textSize="16dp" />
+                android:textSize="14sp" />
         </RelativeLayout>
 
         <TextView
@@ -185,7 +186,7 @@
             android:padding="5dp"
             android:text="Loading..."
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="12sp" />
 
 
         <com.google.android.material.card.MaterialCardView

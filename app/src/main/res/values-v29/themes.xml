@@ -19,8 +19,4 @@
     </style>
 
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
-    </style>
 </resources>

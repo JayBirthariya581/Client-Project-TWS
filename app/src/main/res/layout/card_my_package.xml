@@ -20,7 +20,7 @@
 
 
     <TextView
-        android:id="@+id/vehicleCount"
+        android:id="@+id/serviceCount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Vehicle Count" />

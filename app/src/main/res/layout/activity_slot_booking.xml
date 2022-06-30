@@ -151,44 +151,7 @@
                 android:orientation="vertical">
 
 
-                <!--<LinearLayout
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
 
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_light"
-                        android:minHeight="0dp"
-                        android:paddingVertical="8dp"
-                        android:text="Full name"
-                        android:textColor="#6B779A"
-                        android:textSize="12sp" />
-
-                    <EditText
-
-                        android:id="@+id/name_tv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/textinputborder"
-
-
-                        android:fontFamily="@font/roboto"
-                        android:hint="Enter name"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        android:paddingVertical="15dp"
-                        android:paddingLeft="15dp"
-                        android:textColor="#1e1e1e"
-                        android:textColorHint="#6B779A"
-                        android:textCursorDrawable="@drawable/color_cursor"
-                        android:textSize="14sp" />
-
-
-                </LinearLayout>-->
 
                 <LinearLayout
                     android:id="@+id/pickBrand"
@@ -209,10 +172,10 @@
 
                     <EditText
 
-                        android:id="@+id/brand_tv"
+                        android:id="@+id/company"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/textinputborder"
+                        android:background="@drawable/textinput_back"
                         android:cursorVisible="false"
                         android:drawableEnd="@drawable/drop_1"
                         android:drawablePadding="20dp"
@@ -253,10 +216,10 @@
 
                     <androidx.appcompat.widget.AppCompatEditText
 
-                        android:id="@+id/model_tv"
+                        android:id="@+id/model"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/textinputborder"
+                        android:background="@drawable/textinput_back"
                         android:cursorVisible="false"
                         android:drawableEnd="@drawable/drop_1"
                         android:drawablePadding="20dp"
@@ -279,7 +242,6 @@
 
 
                 <LinearLayout
-                    android:id="@+id/vhNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -297,10 +259,10 @@
 
                     <androidx.appcompat.widget.AppCompatEditText
 
-                        android:id="@+id/vhNo_tv"
+                        android:id="@+id/vhNo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/textinputborder"
+                        android:background="@drawable/textinput_back"
                         android:fontFamily="@font/roboto"
                         android:hint="Enter vehicle no."
                         android:inputType="textEmailAddress"
@@ -339,7 +301,7 @@
 
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/textinputborder"
+                        android:background="@drawable/textinput_back"
                         android:fontFamily="@font/roboto"
                         android:hint="Write your problem"
                         android:inputType="textCapWords"

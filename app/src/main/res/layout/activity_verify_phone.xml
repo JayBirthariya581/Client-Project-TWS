@@ -13,23 +13,20 @@
         android:id="@+id/otp_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
         android:inputType="number"
-        android:itemBackground="@drawable/back_gray"
-        android:textColor="@android:color/black"
-        app:OtpItemCount="6"
+        android:itemBackground="@drawable/otp_box_layout"
+        android:textColor="@color/black"
+        app:itemCount="6"
+        app:viewType="none"
         android:focusableInTouchMode="true"
-        android:focusable="true"
-
-        app:OtpLineColor="@color/grey"
-        app:OtpViewType="line"
+        app:lineColor="@color/black"
+        android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/verify"
 
         android:layout_width="0dp"
@@ -39,7 +36,9 @@
         android:textColor="@color/white"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@color/black"
+        app:cornerRadius="10dp"
+        android:paddingVertical="12dp"
+        android:backgroundTint="@color/blue"
         android:text="Verify OTP"
 
         app:layout_constraintStart_toStartOf="@id/otp_view"

@@ -36,6 +36,8 @@
         <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/review_slider_item.xml" value="0.33" />
         <entry key="..\:/--- STUFF ---/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/slider_item_container.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/GearToCare/G2C MAIN/Geartocare Client/app/src/main/res/layout/activity_checkout.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/GearToCare/G2C MAIN/Geartocare Client/app/src/main/res/layout/activity_place_picker.xml" value="0.21927083333333333" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_get_phone.xml" value="0.33" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_main.xml" value="0.21927083333333333" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/activity_referral.xml" value="0.21927083333333333" />
@@ -45,30 +47,65 @@
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/Geartocare Client/app/src/main/res/layout/fragment_profile.xml" value="0.21927083333333333" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/drawable/arrow_right.xml" value="0.1045" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/drawable/not_available_back.xml" value="0.23" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/drawable/off_back.xml" value="0.1805" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/drawable/otp_box_layout.xml" value="0.22" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/drawable/selected_back.xml" value="0.23" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/drawable/textinput_back.xml" value="0.1975" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/drawable/textinputborder.xml" value="0.1805" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_complete_check_list.xml" value="0.21927083333333333" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_current_place.xml" value="0.21927083333333333" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_discount.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_edit_profile.xml" value="0.5" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_get_phone.xml" value="0.21927083333333333" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_login.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_mechanic_referral.xml" value="0.33" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_other_service.xml" value="0.25" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_package.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_package_detail.xml" value="0.33" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_package_vehicle.xml" value="0.21927083333333333" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_place_picker.xml" value="0.33" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_places_auto.xml" value="0.21927083333333333" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_query_detail.xml" value="0.33" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_query_timer.xml" value="0.21927083333333333" />
-        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_referral.xml" value="0.33" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_referral.xml" value="0.22" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_service_detail.xml" value="0.25" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_slot_booking.xml" value="0.33" />
-        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_two_wheeler_servicing.xml" value="0.25" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_two_wheeler_servicing.xml" value="0.33" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/activity_verify_phone.xml" value="0.33" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/card_date_box.xml" value="0.25" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/card_faq.xml" value="0.33" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/card_mechanic_referral.xml" value="0.5" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/card_package.xml" value="0.33" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/card_payment.xml" value="0.33" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/card_time_box.xml" value="0.5" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/fragment_profile.xml" value="0.2171875" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/no_vehicle.xml" value="0.21927083333333333" />
         <entry key="..\:/------- STUFF -------/Work/Project/Geartocare Client/app/src/main/res/layout/no_vehicle_dialog.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/drawable-v24/white_circle.xml" value="0.212" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/drawable/white_circle.xml" value="0.212" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/activity_available_area.xml" value="0.33" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/activity_discount.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/activity_onboarding.xml" value="0.33" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/activity_package.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/activity_place_picker.xml" value="0.33" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/activity_select_location.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/activity_service_detail.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/activity_slot_booking.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/activity_splash.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/card_available_area.xml" value="0.33" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/card_on_boarding.xml" value="0.22" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/card_package.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/card_package_use.xml" value="0.25" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/card_picker.xml" value="0.33" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/card_vh_company.xml" value="0.21822916666666667" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/coupon_alert.xml" value="0.5" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/fragment_home.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/internet_alert.xml" value="0.5" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/no_vehicle.xml" value="0.21927083333333333" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/picker_layout.xml" value="0.33" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/place_recycler_item_layout.xml" value="0.67" />
+        <entry key="..\:/------- STUFF -------/Work/Project/Main Backup/G2C MAIN/Geartocare Client/app/src/main/res/layout/unavailable_dialog.xml" value="0.33" />
         <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable-v24/back_gray.xml" value="0.24375" />
         <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable-v24/not-selected_back.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/jaybi/AndroidStudioProjects/UrbanClone/app/src/main/res/drawable-v24/progress_back.xml" value="0.23958333333333334" />

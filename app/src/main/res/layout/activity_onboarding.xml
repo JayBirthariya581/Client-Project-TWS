@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.OnBoardingActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/linear_Info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:id="@+id/linear_Info"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingVertical="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Your Bike Service"
+            android:textAlignment="center"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
+            android:text="Service in less than 20 minutes"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:id="@+id/linear_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_Info">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="8dp"
+                android:background="@color/white"
+                android:src="@drawable/white_circle"
+                app:civ_border_color="@color/blue"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="8dp"
+                android:src="@drawable/white_circle"
+                app:civ_border_color="@color/blue"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_3"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="8dp"
+                android:src="@drawable/white_circle"
+                app:civ_border_color="@color/blue"
+                app:civ_border_width="2dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_4"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="8dp"
+                android:src="@drawable/white_circle"
+                app:civ_border_color="@color/blue"
+                app:civ_border_width="2dp" />
+
+
+        </LinearLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="8dp"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/linear_circle">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Get started"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginVertical="12dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <LinearLayout
+            android:id="@+id/linear_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an Account?"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Login"
+                android:textColor="@color/mdtp_red"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
