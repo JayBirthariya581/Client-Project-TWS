@@ -29,4 +29,4 @@ To run the app, you'll need to clone this repository and open the project in And
 Contributions to this project are welcome. If you find a bug or have a feature request, please open an issue on the Github repository. If you would like to contribute code, please fork the repository and create a pull request.
 
 ## Developer
-Jay Birthariya 
+- [Jay Birthariya](https://github.com/JayBirthariya581)
